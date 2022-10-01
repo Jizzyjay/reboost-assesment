@@ -9,6 +9,9 @@ function Service() {
             <div className='service__title'>
                 <h2>What we do...</h2>
             </div>
+            <div className='service_h4'>
+                <h4>Services</h4>
+            </div>
             <hr />
             <div className='service__content'>
                 <div className='service__content__card'>
@@ -63,31 +66,35 @@ const Container = styled.div`
         text-align: start;
         padding: 0 25rem;
     }
+    .service_h4 {
+        text-align: end;
+        padding: 0 11rem;
+        font-size: 14px;
+    }
     .service__title h2{
-        font-size: 2rem;
-        font-weight: 800;
+        font-size: 2.5rem;
+        font-weight: 600;
     }
     hr {
         width: 60%;
-        height: 0.2rem;
+        height: 0.1rem;
         background-color: #000;
         border: none;
-        margin: 1rem 0 2rem 25rem;
+        margin: 0 0 1rem 25rem;
     }
     .service__content{
         display: grid;
         grid-template-columns: 1fr 2fr;
-        padding: 5rem 25rem;
+        padding: 2rem 15rem;
     }
     .service__content__card{
         border: 1px solid rgba(0,0,0,.1);
-        width: 30vw;
+        width: 35vw;
         max-height: 200vh;
         border-radius: 5px;
         padding:  1.5rem;
-        margin: 1rem;
+        margin: 2rem 2rem 1rem 0;
         /* width: 60%; */
-
     } 
     .service__content__card__icon{
         display: flex;
@@ -108,7 +115,7 @@ const Container = styled.div`
         margin: 1.5rem;
     }
     .service__content__card button{
-        width: 50%;
+        width: 40%;
         height: 3rem;
         background-color: #113cfc;
         color: #fff;
@@ -121,8 +128,32 @@ const Container = styled.div`
         font-weight: 600;
         cursor: pointer;
     }
-    .service__content__card button:hover{
+    // Service responsive
+    @media screen and (max-width: 1042px){
+        .service__title h2{
+            text-align: start;
+            padding-left: 0 1rem;
+            font-size: 2rem;
+        }
+        .service__content{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 2rem 6rem;
+        }
+        .service__content__card{
+            width: 40vw;
+            max-height: 200vh;
+        }
+        hr {
+        width: 90%;
+        height: 0.1rem;
         background-color: #000;
+        border: none;
+        margin: 0 0 1rem 3rem;
+    }
+    .service_h4 {
+        padding: 0 3.5rem;
+    }
     }
     @media screen and (max-width: 768px){
         .service__content{
@@ -132,7 +163,7 @@ const Container = styled.div`
         }
         .service__content__card{
             width: 90vw;
-            height: 55vh;
+            height: 65vh;
             border-radius: 5px;
             padding:  1.5rem;
             margin: 1rem;
@@ -143,7 +174,6 @@ const Container = styled.div`
             margin-left: 17rem;
         }
         .service__title h2{
-            text-align: center;
             font-size: 2.5rem;
             font-weight: 800;
         }
@@ -226,8 +256,8 @@ const Container = styled.div`
             /* padding-bottom: 1rem; */
         }
         .service__content__card button{
-            width: 45%;
-            height: 4.5rem;
+            width: 40%;
+            height: 3.5rem;
             background-color: #113cfc;
             color: #fff;
             border: none;

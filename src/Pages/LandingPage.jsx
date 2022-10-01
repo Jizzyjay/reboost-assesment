@@ -17,7 +17,7 @@ export default LandingPage;
 const Container = styled.div`
   .bg {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-color: #113cfc;
     /* position: relative; */
   }
@@ -26,4 +26,9 @@ const Container = styled.div`
     height: 100%;
     object-fit: cover;
   }
+  @media screen and (max-width: 425px){
+    .bg{
+      height: 95vh;
+    }
+}
 `;
