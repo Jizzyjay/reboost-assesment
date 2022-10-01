@@ -23,43 +23,78 @@ function About() {
 
 export default About
 
+
 const Container = styled.div`
     .about_container{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        padding: 5rem 12rem;
         align-items: center;
         background-color: #113cfc;
-        padding: 5rem 10rem;
+        margin-bottom: 2rem;
     }
     .about_container .logo{
         width: 4rem;
+        padding: 0 15rem;
     }
-    /* .about_container{
-        padding: 5rem 0;
-        background-color: #113cfc;
-        h1{ font-size: 3rem;
+    .about_container .logo img{
+        width: 500%;
+    }
+    .about_container .about_content{
+        color: #fff;
+    }
+    .about_container .about_content h1{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    .about_container .about_content p{
+        font-size: 14px;
+        line-height: 1.7rem;
+        font-weight: 500;
+        margin: 2rem 0;
+    }
+    .about_container .about_content button{
+        width: 17%;
+        height: 3rem;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        font-size: 11px;
+        padding: 1rem;
+    }
+
+    /* @media (max-width: 768px){
+        .about_container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            padding: 5rem 10rem;
+            align-items: center;
+            background-color: #113cfc;
+            margin-bottom: 2rem;
+        }
+        .about_container .logo{
+            width: 4rem;
+        }
+        .about_container .logo img{
+            width: 500%;
+        }
+        .about_container .about_content{
             color: #fff;
+        }
+        .about_container .about_content h1{
+            font-size: 2.5rem;
             font-weight: 800;
-            margin-bottom: 2rem;
-            padding: .5rem 30rem;
         }
-        p{ 
-            font-size: 14px;
-            color: #fff;
-            line-height: 1.5rem;
-            margin-bottom: 2rem;
-            padding: .5rem 30rem;
-        }
-        button{
-            padding: 1rem 2rem;
-            /* background-color: #fff; */
-            /* background-color: #113cfc; */
-            background-color: #fff;
-            border: none;
-            border-radius: 5px;
-            color: #000;
-            font-size: 1rem;
-            /* margin-top: 2rem; */
-        }
+        .about_container .about_content p{
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 500;
+            margin: 2rem 0;
+
+
     } */
+
 `
