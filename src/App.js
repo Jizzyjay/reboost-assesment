@@ -1,9 +1,8 @@
 import "./App.css";
-// import {Navbar} from './Components/Navbar';
 import Navbar from "./Components/Navbar";
 import About from "./Components/About";
-import Blog from "./Components/Blog";
-import Footer from "./Components/Footer";
+// import Blog from "./Components/Blog";
+// import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Service from "./Components/Service";
 // import { useState } from "react";
@@ -16,12 +15,11 @@ function App() {
       {/* <Background setIsOpened={setIsOpened} show={isOpened} /> */}
       <Navbar  />
       {/* <Sidebar show={isOpened} setIsOpened={setIsOpened} /> */}
-      <Navbar />
       <Header />
       <Service />
       <About />
-      <Blog />
-      <Footer />
+      {/* <Blog />
+      <Footer /> */}
     </div>
   );
 }
