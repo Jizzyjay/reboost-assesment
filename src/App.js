@@ -6,15 +6,15 @@ import Blog from "./Components/Blog";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Service from "./Components/Service";
-import { useState } from "react";
+// import { useState } from "react";
 
 function App() {
-  const [isOpened, setIsOpened] = useState(false);
+  // const [isOpened, setIsOpened] = useState(false);
 
   return (
     <div>
       {/* <Background setIsOpened={setIsOpened} show={isOpened} /> */}
-      <Navbar toggleMenu={setIsOpened} />
+      <Navbar  />
       {/* <Sidebar show={isOpened} setIsOpened={setIsOpened} /> */}
       <Navbar />
       <Header />
@@ -27,3 +27,5 @@ function App() {
 }
 
 export default App;
+
+// toggleMenu={setIsOpened}
