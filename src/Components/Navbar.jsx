@@ -1,7 +1,7 @@
 import React from "react";
 import "../Style/Navbar.css";
 import { slide as Menu } from "react-burger-menu";
-import { Link, NavLink } from "react-router-dom";
+// import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = React.useState(false);
@@ -11,7 +11,7 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div className="bbe">
       <Menu
         animation="push"
         right={true}

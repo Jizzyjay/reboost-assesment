@@ -1,40 +1,59 @@
-import React from 'react'
+import React from "react";
+import { BiPhoneCall } from "react-icons/bi";
 // import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled from "styled-components";
 // import logo from '../assets/image/logo.jpg'
-import LandingPage from '../Pages/LandingPage'
+import LandingPage from "../Pages/LandingPage";
 
 function Header() {
-    return (
-        <Container>
-            <div className='header_container'>
-                <LandingPage />
-                {/* <div className='logo'>
+  return (
+    <Container>
+      <div className="header_container">
+        <LandingPage />
+
+        {/* <div className='logo'>
                     <Link to='/'>
                         <img src ={logo} alt="logo" />
                     </Link>
                 </div>  */}
-                <div className='content'>
-                    <h2>Boost your <br /> business.</h2>
-                    <p>Our global team with their fine expertise will deliver a wider outlook where your clients can engage and relate. We make relevant and effective visual communication strategies for your business keeping an eye on the online communities and cultures for greater collaboration and the user experience.</p>
-                    <p>Let us give you a boost.</p>
-                    <button>Find out more.</button>
-                    {/* <button>Book a 15 minute consultation today </button> */}
-                </div>
-            </div>
-        </Container>
-    )
+        <div className="content">
+          {/* <h1>AppDividend</h1> */}
+
+          <h2>
+            Boost your <br /> business.
+          </h2>
+          <p>
+            Our global team with their fine expertise will deliver a wider
+            outlook where your clients can engage and relate. We make relevant
+            and effective visual communication strategies for your business
+            keeping an eye on the online communities and cultures for greater
+            collaboration and the user experience.
+          </p>
+          <p>Let us give you a boost.</p>
+          <button>Find out more.</button>
+          <div className="btn">
+            <a
+              href="https://api.whatsapp.com/send?phone=8141153727&text=Hello"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>
+                Book a free 15 minute consultation today <BiPhoneCall />{" "}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </Container>
+  );
 }
 
-export default Header
+export default Header;
 
 const Container = styled.div`
     .header_container{
         display: flex;
-        /* grid-template-columns: 1fr 1fr; */
         gap: 5rem;
-        /* height: auto; */
-        /* padding: 5rem 12rem; */
         align-items: center;
         margin-bottom: 2rem;
     }
@@ -48,11 +67,11 @@ const Container = styled.div`
     .content{
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 40%;
         transform: translate(-50%, -50%);
         text-align: start;
         color: #fff;
-        width: 50%;
+        width: 77vw;
         padding: 0 5rem;
     }
     .content h2{
@@ -67,12 +86,12 @@ const Container = styled.div`
     .content button{
         background-color: #113cfc;
         height: 4.5em;
-        width: 15%;
+        width: 20%;
         color: #fff;
         border: none;
         padding: 0.5rem 1rem;
         border-radius: 5px;
-        font-size: 13px;
+        font-size: 14px;
         margin: 1rem 0;
     }
     .content button:hover{
@@ -81,6 +100,27 @@ const Container = styled.div`
         border: 1px solid #113cfc;
         cursor: pointer;
     } 
+    .content .btn{
+        margin-top: 1rem;
+        text-align: end;
+    }
+    .content .btn button{
+        background-color: #113cfc;
+        height: 4.5em;
+        width: 20%;
+        color: #fff;
+        font-size: 14px;
+
+    
+    .content .btn button{
+        /* background-color: #fff;
+        color: #113cfc; */
+        /* border: 1px solid #113cfc;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-size: 14px;
+        margin: 1rem 0; */
+    }
     @media screen and (max-width: 1024px){
         .header_container{
             display: block;
@@ -89,11 +129,11 @@ const Container = styled.div`
         .content{
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 65%;
             transform: translate(-80%, -60%);
             text-align: start;
             color: #fff;
-            width: 50%;
+            width: 77vw;
             padding: 0 1rem;
         } 
         .content h2{
@@ -107,7 +147,7 @@ const Container = styled.div`
         }
         .content button{
             height: 4.5em;
-            width: 33%;
+            width: 18%;
             color: #fff;
             border: none;
             padding: 0.5rem 1rem;
@@ -118,44 +158,71 @@ const Container = styled.div`
         .content button:hover{
             background-color: #fff;
             color: #113cfc;
-            border: 1px solid #113cfc;
             cursor: pointer;
         }
     }
-    @media screen and (max-width: 425px){
+    @media screen and (max-width: 768px){
         .header_container{
             display: block;
             margin-bottom: 1rem;
+
         }
         .content{
-            position: absolute;
             top: 50%;
-            left: 50%;
-            transform: translate(-50%, -40%);
-            text-align: start;
-            width: 100%;
-            padding: 0 1rem;
+            left: 70%;
         }
         .content h2{
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 800;
         }
         .content p{
             font-size: 15px;
             line-height: 1.5rem;
-            margin: 1rem 0;
+
         }
         .content button{
-            height: 3.2rem;
-            width: 32%;
-            padding: 0.5rem 1rem;
-            font-size: 14px;
-            margin: 1rem 0;
+            height: 4.5em;
+            width: 26%;
         }
         .content button:hover{
             background-color: #fff;
             color: #113cfc;
             cursor: pointer;
         }
+
+    @media screen and (max-width: 425px){
+        .header_container{
+            margin-bottom: 1rem;
+        }
+        .content{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+            width: 100%;
+        }
+        .content h2{
+            font-size: 4rem;
+            font-weight: 800;
+        }
+        .content p{
+            font-size: 15px;
+            line-height: 1.5rem;
+        }
+        .content .btn {
+            display: none;
+        }
+        .content button{
+            height: 3.2rem;
+            width: 32%;
+            padding: 0.5rem 1rem;
+            font-size: 14px;
+        }
+        .content button:hover{
+            background-color: #fff;
+            color: #113cfc;
+            cursor: pointer;
+        }
+    }
+}
     }
 `

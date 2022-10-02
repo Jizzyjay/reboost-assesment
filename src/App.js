@@ -1,21 +1,24 @@
-import './App.css';
+import "./App.css";
 // import {Navbar} from './Components/Navbar';
-import Navbar from './Components/Navbar';
-import About from './Components/About';
-import Blog from './Components/Blog';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Service from './Components/Service';
-import Work from './Components/Work';
+import Navbar from "./Components/Navbar";
+import About from "./Components/About";
+import Blog from "./Components/Blog";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import Service from "./Components/Service";
+import { useState } from "react";
 
 function App() {
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
     <div>
-    
+      {/* <Background setIsOpened={setIsOpened} show={isOpened} /> */}
+      <Navbar toggleMenu={setIsOpened} />
+      {/* <Sidebar show={isOpened} setIsOpened={setIsOpened} /> */}
       <Navbar />
       <Header />
       <Service />
-      <Work />
       <About />
       <Blog />
       <Footer />
